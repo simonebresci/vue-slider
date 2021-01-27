@@ -15,35 +15,96 @@
         <title>Slider</title>
     </head>
     <body>
-        <div class="container">
+      <!-- VUE AREA -->
+        <div id="root">
+          <div class="container">
+
+            <!-- Test Vue -->
+            <!-- <div>
+              <label for="">Campo di test</label>
+              <input v-model="colore">
+            </div> -->
             <div class="slider-wrapper">
+
+                <!-- Tasto precedente -->
                 <div class="prev">
                     <i class="fas fa-angle-left"></i>
                 </div>
+                <!-- /Tasto precedente -->
+
+                <!-- Immagine corrente -->
                 <div class="images">
                     <img class="active first" src="https://images.pexels.com/photos/371633/pexels-photo-371633.jpeg?cs=srgb&dl=clouds-country-daylight-371633.jpg&fm=jpg" alt="">
-                    <img src="https://static.photocdn.pt/images/articles/2017/04/28/iStock-646511634.jpg" alt="">
-                    <img src="https://cdn.mos.cms.futurecdn.net/FUE7XiFApEqWZQ85wYcAfM.jpg" alt="">
-                    <img class="last" src="https://static.photocdn.pt/images/articles/2017/04/28/iStock-546424192.jpg" alt="">
+
                 </div>
+                <!-- /Immagine corrente -->
+
+                <!-- Tasto successivo -->
                 <div class="next">
                     <i class="fas fa-angle-right"></i>
                 </div>
+                <!-- /Tasto successivo -->
+
                 <div class="nav">
+                  <!-- Cerchi selezione diretta -->
                     <i class="fas fa-circle active first"></i>
                     <i class="fas fa-circle"></i>
                     <i class="fas fa-circle"></i>
                     <i class="fas fa-circle last"></i>
                 </div>
-                <!-- Vue Test -->
-                <div id="root">
-                  <label for="">Campo di test</label>
-                  <input v-model="colore">
-                </div>
-                <!-- /Vue Test -->
-            </div>
-        </div>
+                <!-- /Cerchi selezione diretta -->
 
+
+                <div class="test-area">
+                  <h2>DEBUG AREA</h2>
+                  <span>VARIABILI VUE</span>
+                  <div>Current index image</div>
+                  <button @click="ImgIndexSub" > SUB</button>
+                  <input v-model="currentImgIndex">
+                  <button @click="ImgIndexAdd" > ADD</button>
+
+
+                  </div>
+                  <br>
+
+                  <!-- Elemento selezionato -->
+                  <div> Path corrente = {{pathImmagini[currentImgIndex]}}
+
+                  </div>
+
+                  <span>Test stampa PathImmagini</span>
+                  <ul>
+
+                  </ul>
+                    <li v-for="(path, i) in pathImmagini">[{{i}}] - {{path}} </li>
+                  </ul>
+
+                </div>
+
+
+              </div>
+              <!-- /Slider wrapper -->
+          </div>
+          <!-- /Container -->
+        </div>
         <script src="main.js"></script>
     </body>
 </html>
+
+
+<!-- TODO: -->
+<!--
+1) Definire array di pathImmagini
+2) Classe active per l'immagine corrente
+
+2) Scorrimento delle immagini con freccette
+- utilizzare indice array
+
+
+3) Selezione diretta con cerchietti
+
+
+ -->
+
+ <!-- TODO EXTRA:  -->
+ <!-- 1) Funzioni con indice -->

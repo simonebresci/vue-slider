@@ -46,10 +46,19 @@
 
                 <div class="nav">
                   <!-- Cerchi selezione diretta -->
-                    <i class="fas fa-circle active first"></i>
+                    <!-- <i class="fas fa-circle active first"></i>
                     <i class="fas fa-circle"></i>
                     <i class="fas fa-circle"></i>
-                    <i class="fas fa-circle last"></i>
+                    <i class="fas fa-circle last"></i> -->
+                    <ul>
+                      <li v-for="(p,i) in pathImmagini">
+                        <span v-if="i === currentImgIndex"> pallino selezionato{{i}}</span>
+                        <span v-else="i === currentImgIndex"> pallino {{i}}</span>
+                       </li>
+                    </ul>
+
+
+
                 </div>
                 <!-- /Cerchi selezione diretta -->
 

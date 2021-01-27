@@ -25,6 +25,10 @@ var app = new Vue({
         if (this.currentImgIndex>=1){
           this.currentImgIndex -= 1;
         }
+      },
+      // Da fare
+      updateCurrentIndex: function(){
+        alert('cliccato');
       }
 
 

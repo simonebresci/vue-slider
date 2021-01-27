@@ -53,7 +53,7 @@
                     <ul>
                       <li v-for="(p,i) in pathImmagini">
                         <span v-if="i === currentImgIndex"> <i class="fas fa-circle selected"></i> </span>
-                        <span v-else="i === currentImgIndex"><i class="fas fa-circle"></i></span>
+                        <span @click="updateCurrentIndex" v-else="i === currentImgIndex"><i class="fas fa-circle"></i></span>
                        </li>
                     </ul>
 
@@ -67,8 +67,9 @@
                   <h2>DEBUG AREA</h2>
                   <span>VARIABILI VUE</span>
                   <div>Current index image</div>
-                  <button @click="ImgIndexSub" > SUB</button>
-                  <input v-model="currentImgIndex">
+
+                  <button  @click="ImgIndexSub" > SUB</button>
+                  <input @keyup.left="ImgIndexSub" @keyup.right="ImgIndexAdd" v-model="currentImgIndex">
                   <button @click="ImgIndexAdd" > ADD</button>
 
 

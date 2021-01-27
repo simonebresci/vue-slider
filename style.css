@@ -59,3 +59,17 @@
 .nav > i.active {
     color: blue;
 }
+
+/* Codice aggiunto */
+.selected{
+  color: orange;
+}
+
+.nav ul{
+  text-decoration: none;
+}
+.nav ul li{
+  display: inline-block;
+  padding-right: 15px;
+
+}

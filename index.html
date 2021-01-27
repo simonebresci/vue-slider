@@ -52,8 +52,8 @@
                     <i class="fas fa-circle last"></i> -->
                     <ul>
                       <li v-for="(p,i) in pathImmagini">
-                        <span v-if="i === currentImgIndex"> pallino selezionato{{i}}</span>
-                        <span v-else="i === currentImgIndex"> pallino {{i}}</span>
+                        <span v-if="i === currentImgIndex"> <i class="fas fa-circle selected"></i> </span>
+                        <span v-else="i === currentImgIndex"><i class="fas fa-circle"></i></span>
                        </li>
                     </ul>
 
